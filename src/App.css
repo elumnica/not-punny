@@ -22,8 +22,12 @@
 }
 
 .divCloud{
-    
+    background-color: #fff;
+    height: 150px;
+    width: 375px;
+    border-radius: 50%;
 }
+
 /* The typing effect */
 @keyframes typing {
     from { width: 0 }
@@ -33,5 +37,5 @@
   /* The typewriter cursor effect */
 @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: orange; }
+    50% { border-color: pink; }
   }
