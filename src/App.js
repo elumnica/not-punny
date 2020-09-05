@@ -9,12 +9,7 @@ import './App.css';
 function App() {
   return (
     <div className='parent'>
-        <h2 className='title'>Hey, that's not Punny!</h2>
-        <div className = 'divCloud'>
-
-        </div>
-        <Button />
-        
+        <h2 className='title'>Hey, that's not Punny!</h2>  
     </div>
   );
 }

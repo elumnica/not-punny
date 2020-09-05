@@ -21,12 +21,7 @@
     blink-caret .75s step-end infinite;
 }
 
-.divCloud{
-    background-color: #fff;
-    height: 150px;
-    width: 375px;
-    border-radius: 50%;
-}
+
 
 /* The typing effect */
 @keyframes typing {
