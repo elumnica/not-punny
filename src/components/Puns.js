@@ -11,7 +11,7 @@ const PunBubble={
 }
 
 const hidden = {
-    display = 'none'
+    display: 'none'
 }
 
 const container = {
@@ -25,13 +25,13 @@ const container = {
 function Puns(props){
     return(
         <div className="quote-container" style={container}>
-            <h2 className="setup" id="setup" style={props.newPun ? quoteBubble : hidden}>
+            <h2 className="setup" id="setup" style={props.newPun ? PunBubble : hidden}>
                 {props.setup}
             </h2>
             <h2
                 className="punchline"
                 id="punchline"
-                style={props.newPun ? hidden : quoteBubble}>
+                style={props.newPun ? hidden : PunBubble}>
                 {props.punchline}
             </h2>
         </div>

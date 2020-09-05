@@ -37,8 +37,8 @@ class GetPuns extends React.Component {
 
     render(){
         return(
-            <div className='quoteBox' id='quoteBox'>
-                <Quotes
+            <div className='getPuns' id='getPuns'>
+                <Puns
                     setup={this.state.setup}
                     punchline={this.state.punchline}
                     newPun={this.state.newPun}
