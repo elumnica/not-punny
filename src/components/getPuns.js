@@ -2,13 +2,6 @@ import React from 'react';
 import Puns from './Puns';
 import Button from './Button';
 
-
-const divCloud{
-    background-color: #fff;
-    height: 150px;
-    width: 200%;
-    border-radius: 50%;
-  }
 class GetPuns extends React.Component {
     state = {
         setup: '',
@@ -44,8 +37,17 @@ class GetPuns extends React.Component {
 
     render(){
         return(
-            <div className='quoteBox' id='quoteBox' style={divCloud} >
-                
+            <div className='quoteBox' id='quoteBox'>
+                <Quotes
+                    setup={this.state.setup}
+                    punchline={this.state.punchline}
+                    newPun={this.state.newPun}
+                    />
+                <Button
+                    setup={this.state.setup}
+                    punchline={this.state.punchline}
+                    newPun={this.state.newPun}
+                    />
             </div>
         )
     }
