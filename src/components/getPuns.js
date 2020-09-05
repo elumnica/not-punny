@@ -5,8 +5,8 @@ import Button from './Button';
 class GetPuns extends React.Component {
     state = {
         setup: '',
-        punchline: '',
-        newJoke: false,
+        punline: '',
+        newPun: false,
     }
 
     componentDidMount = () => {
@@ -18,6 +18,20 @@ class GetPuns extends React.Component {
         .then(response => {
             return response.json();
         })
-        console.log(response);
+
+        .then(data => {
+            this.setState({
+                setup: data[0].setup,
+                newPun: true,
+            })
+        })
+        .catch(err => {
+            console.log(err);
+        });
+    }
+    getPunline = () => {
+        this.setState({
+            newPun: false
+        });
     }
 }
