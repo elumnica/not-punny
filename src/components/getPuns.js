@@ -41,7 +41,7 @@ class GetPuns extends React.Component {
 
     render() {
         return(
-            <div className="quote-box" id="quote-box" style={{width: "100%"}}>
+            <div className="quote-box" id="quote-box" style={{justifyContent: "space-between"}}>
                 
                 <Puns
                     setup={this.state.setup}

@@ -1,12 +1,12 @@
 import React from 'react';
 
 const quoteBubble = {
-    width: 300,
+    width: 350,
     background: "white",
     borderRadius: "50%",
     padding: "3rem 4rem",
     margin: "1.5rem", 
-    textAlign: "center"
+    textAlign: "center",
   }
 
 const hidden = {
@@ -18,8 +18,10 @@ const container = {
     flexFlow: "row wrap",
     justifyContent: "center",
     alignItems: "center",
-    height: 280,
+    height: 350,
     color: "black",
+    fontfamily: "Oxygen",
+    justifyContent: "space-around",
 }
 
 function Puns(props) {

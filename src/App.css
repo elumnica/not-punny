@@ -21,7 +21,12 @@
     blink-caret .75s step-end infinite;
 }
 
-
+.divCloud{
+    background-color: #fff;
+    height: 150px;
+    width: 375px;
+    border-radius: 50%;
+}
 
 /* The typing effect */
 @keyframes typing {
@@ -33,4 +38,49 @@
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: pink; }
+  }
+
+
+
+  @media only screen and (max-width: 320px) {
+    .parent{
+        background-image: linear-gradient(to bottom, rgb(218, 59, 59) ,rgb(218, 142, 142));
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 40vh;
+        width: 60vw;
+        color: #fff;
+        font-family: "Oxygen", sans-serif;
+    }
+  }
+
+  @media only screen and (min-height: 812px) {
+    .parent{
+        background-image: linear-gradient(to bottom, rgb(218, 59, 59) ,rgb(218, 142, 142));
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 52vh;
+        width: 100vw;
+        color: #fff;
+        font-family: "Oxygen", sans-serif;
+    }
+  }
+
+
+  @media only screen and (min-width: 1024px) and (max-height: 1366px) {
+    .parent{
+        background-image: linear-gradient(to bottom, rgb(218, 59, 59) ,rgb(218, 142, 142));
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 50vh;
+        width: 60vw;
+        color: #fff;
+        font-family: "Oxygen", sans-serif;
+    }
   }
