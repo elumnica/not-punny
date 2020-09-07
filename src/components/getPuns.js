@@ -2,51 +2,57 @@ import React from 'react';
 import Puns from './Puns';
 import Button from './Button';
 
+
 class GetPuns extends React.Component {
     state = {
-        setup: '',
-        punline: '',
-        newPun: false,
+        setup: "",
+        punchline: "",
+        newJoke: false,
     }
 
     componentDidMount = () => {
-        this.getNewPun();
+        this.getNewJoke();
     }
 
-    getNewPun = () => {
-        fetch("https://sv443.net/jokeapi/v2/joke/Pun")
+    getNewJoke = () => {
+        fetch("https://official-joke-api.appspot.com/random_joke")
         .then(response => {
             return response.json();
+            console.log(response);
         })
-
         .then(data => {
             this.setState({
-                setup: data[0].setup,
-                newPun: true,
+                setup: data.setup,
+                punchline: data.punchline,
+                newJoke: true,
             })
         })
         .catch(err => {
             console.log(err);
         });
     }
-    getPunline = () => {
+
+    getPunchline = () => {
         this.setState({
-            newPun: false
-        });
+            newJoke: false
+        })
     }
 
-    render(){
+
+    render() {
         return(
-            <div className='getPuns' id='getPuns'>
+            <div className="quote-box" id="quote-box" style={{width: "100%"}}>
+                
                 <Puns
                     setup={this.state.setup}
                     punchline={this.state.punchline}
-                    newPun={this.state.newPun}
+                    newJoke={this.state.newJoke}
                     />
+                
                 <Button
-                    setup={this.state.setup}
-                    punchline={this.state.punchline}
-                    newPun={this.state.newPun}
+                    getNewJoke={this.getNewJoke}
+                    getPunchline={this.getPunchline}
+                    newJoke={this.state.newJoke}
                     />
             </div>
         )

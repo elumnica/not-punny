@@ -15,18 +15,19 @@ const button = {
     borderRadius: "0.5rem",
 }
 
-function Button(props){
+function Buttons(props) {
     return(
-        <div className='button-container' style={buttonBox}>
-            <div 
-            className="button"
-            style={button}
-            onClick={props.newPun ? props.getPunAns : props.getNewJoke}
+        <div className="button-container" style={buttonBox}>
+            <div
+                className="button"
+                style={button}
+                onClick={props.newJoke ? props.getPunchline : props.getNewJoke}
             >
-            {props.newPun ? 'Get Answer' : 'Get Pun'}    
+                {props.newJoke ? 'Get Answer' : 'Get Joke'}
             </div>
+            
         </div>
     )
 }
 
-export default Button;
+export default Buttons;
